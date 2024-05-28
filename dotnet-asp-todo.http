@@ -1,0 +1,6 @@
+@dotnet_asp_todo_HostAddress = http://localhost:5120
+
+GET {{dotnet_asp_todo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
