@@ -6,15 +6,8 @@ namespace dotnet_asp_todo.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class TodoController : ControllerBase
+public class TodoController(TodoService _service) : ControllerBase
 {
-    TodoService _service;
-
-    public TodoController(TodoService service)
-    {
-        _service = service;
-    }
-
     [HttpGet]
     public IEnumerable<Todo> GetAll() => _service.GetAll();
 
